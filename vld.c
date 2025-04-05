@@ -71,22 +71,22 @@ ZEND_GET_MODULE(vld)
 
 ZEND_DECLARE_MODULE_GLOBALS(vld)
 
-PHP_INI_BEGIN()
-    STD_PHP_INI_ENTRY("rok.active",       "0", PHP_INI_SYSTEM, OnUpdateBool, active,       zend_vld_globals, vld_globals)
-    STD_PHP_INI_ENTRY("rok.skip_prepend", "0", PHP_INI_SYSTEM, OnUpdateBool, skip_prepend, zend_vld_globals, vld_globals)
-    STD_PHP_INI_ENTRY("rok.skip_append",  "0", PHP_INI_SYSTEM, OnUpdateBool, skip_append,  zend_vld_globals, vld_globals)
-    STD_PHP_INI_ENTRY("rok.execute",      "1", PHP_INI_SYSTEM, OnUpdateBool, execute,      zend_vld_globals, vld_globals)
-    STD_PHP_INI_ENTRY("rok.verbosity",    "1", PHP_INI_SYSTEM, OnUpdateLong, verbosity,    zend_vld_globals, vld_globals)
-    STD_PHP_INI_ENTRY("rok.format",       "0", PHP_INI_SYSTEM, OnUpdateBool, format,       zend_vld_globals, vld_globals)
-    STD_PHP_INI_ENTRY("rok.col_sep",      "\t", PHP_INI_SYSTEM, OnUpdateString, col_sep,   zend_vld_globals, vld_globals)
-	STD_PHP_INI_ENTRY("rok.save_dir",     "/tmp", PHP_INI_SYSTEM, OnUpdateString, save_dir, zend_vld_globals, vld_globals)
-	STD_PHP_INI_ENTRY("rok.save_paths",   "0", PHP_INI_SYSTEM, OnUpdateBool, save_paths,   zend_vld_globals, vld_globals)
-	STD_PHP_INI_ENTRY("rok.dump_paths",   "1", PHP_INI_SYSTEM, OnUpdateBool, dump_paths,   zend_vld_globals, vld_globals)
-PHP_INI_END()
+// PHP_INI_BEGIN()
+//     STD_PHP_INI_ENTRY("rok.active",       "0", PHP_INI_SYSTEM, OnUpdateBool, active,       zend_vld_globals, vld_globals)
+//     STD_PHP_INI_ENTRY("rok.skip_prepend", "0", PHP_INI_SYSTEM, OnUpdateBool, skip_prepend, zend_vld_globals, vld_globals)
+//     STD_PHP_INI_ENTRY("rok.skip_append",  "0", PHP_INI_SYSTEM, OnUpdateBool, skip_append,  zend_vld_globals, vld_globals)
+//     STD_PHP_INI_ENTRY("rok.execute",      "1", PHP_INI_SYSTEM, OnUpdateBool, execute,      zend_vld_globals, vld_globals)
+//     STD_PHP_INI_ENTRY("rok.verbosity",    "1", PHP_INI_SYSTEM, OnUpdateLong, verbosity,    zend_vld_globals, vld_globals)
+//     STD_PHP_INI_ENTRY("rok.format",       "0", PHP_INI_SYSTEM, OnUpdateBool, format,       zend_vld_globals, vld_globals)
+//     STD_PHP_INI_ENTRY("rok.col_sep",      "\t", PHP_INI_SYSTEM, OnUpdateString, col_sep,   zend_vld_globals, vld_globals)
+// 	STD_PHP_INI_ENTRY("rok.save_dir",     "/tmp", PHP_INI_SYSTEM, OnUpdateString, save_dir, zend_vld_globals, vld_globals)
+// 	STD_PHP_INI_ENTRY("rok.save_paths",   "0", PHP_INI_SYSTEM, OnUpdateBool, save_paths,   zend_vld_globals, vld_globals)
+// 	STD_PHP_INI_ENTRY("rok.dump_paths",   "1", PHP_INI_SYSTEM, OnUpdateBool, dump_paths,   zend_vld_globals, vld_globals)
+// PHP_INI_END()
 
 static void vld_init_globals(zend_vld_globals *vg)
 {
-	vg->active       = 0;
+	vg->active       = 1;
 	vg->skip_prepend = 0;
 	vg->skip_append  = 0;
 	vg->execute      = 1;
