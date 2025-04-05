@@ -127,13 +127,13 @@ PHP_RINIT_FUNCTION(vld)
 	old_compile_string = zend_compile_string;
 	old_execute_ex = zend_execute_ex;
 
-	if (VLD_G(active)) {
-		zend_compile_file = vld_compile_file;
-		zend_compile_string = vld_compile_string;
-		if (!VLD_G(execute)) {
-			zend_execute_ex = vld_execute_ex;
-		}
-	}
+	// if (VLD_G(active)) {
+	// 	zend_compile_file = vld_compile_file;
+	// 	zend_compile_string = vld_compile_string;
+	// 	if (!VLD_G(execute)) {
+	// 		zend_execute_ex = vld_execute_ex;
+	// 	}
+	// }
 
 	if (VLD_G(save_paths)) {
 		char *filename;
