@@ -53,7 +53,7 @@ zend_function_entry vld_functions[] = {
 
 zend_module_entry vld_module_entry = {
 	STANDARD_MODULE_HEADER,
-	"vld",
+	"rikki",
 	vld_functions,
 	PHP_MINIT(vld),
 	PHP_MSHUTDOWN(vld),
